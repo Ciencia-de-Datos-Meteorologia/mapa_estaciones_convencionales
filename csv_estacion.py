@@ -6,11 +6,14 @@ Script encargado de generar los archivos CSV de los datos mensuales de cada esta
 '''
 
 ## Ruta de salida de los csv de cada estación
-directory = '/var/www/html/mapaMet/output_csv_estacion/'
+directorio_salida = '/var/www/html/mapaMet/output_csv_estacion/'
+directorio_copia = './output_para_joel/'
 
 
 ## Leer csv 
 df = pd.read_csv('database.csv', delimiter=',', header=0)
+## Copia para que Joel Ixchamparic solicitó
+df_joel = df.copy()
 ## Eliminar las columnas no necesarias
 df.drop(columns=['CODIGO_INSIVUMEH','CODIGO','LATITUD','LONGITUD','ALTITUD','FUENTE'], inplace=True)
 ## Renombrar el nombre de las columnas
@@ -43,4 +46,10 @@ for estacion in estaciones:
     data_estacion = data_estacion.reset_index(drop=True)
     data_estacion.drop(columns=['NOMBRE_ESTACIÓN'], inplace=True)
     data_estacion.sort_values("Fecha", inplace=True)
-    data_estacion.to_csv(f"{os.path.join(directory,estacion)}.csv",index=False)
+    data_estacion.to_csv(f"{os.path.join(directorio_salida,estacion)}.csv",index=False)
+
+## Creación de archivos .csv que Joel Ixchamparic solicitó
+for estacion in estaciones:
+    data_estacion = df_joel[df_joel['NOMBRE_ESTACIÓN'] == estacion]
+    data_estacion.sort_values("FECHA", inplace=True)
+    data_estacion.to_csv(f"{os.path.join(directorio_copia,estacion)}.csv",index=False)
