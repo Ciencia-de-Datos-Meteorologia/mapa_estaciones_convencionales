@@ -6,7 +6,7 @@ Script encargado de generar los archivos CSV de los datos mensuales de cada esta
 '''
 
 ## Ruta de salida de los csv de cada estación
-directorio_salida = '/var/www/html/mapaMet/output_csv_estacion/'
+directorio_salida = '/var/www/html/mapas/mapa_convencionales/output_csv_estacion/'
 directorio_copia = './output_para_joel/'
 
 

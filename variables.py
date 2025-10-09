@@ -9,7 +9,7 @@ Script encargado de generar los archivos HTML que se muestran dentro de la pesta
 current=datetime.datetime.now()
 
 ## Ruta de salida de los HTML
-directory='/var/www/html/mapaMet/output_variables/'
+directory='/var/www/html/mapas/mapa_convencionales/output_variables/'
 ## Enlace que dirige hacia la página de insivumeh donde se almacenan los dashboard de todas las variables
 url='https://insivumeh.gob.gt/img/Estaciones_Met/output_dashboard/'
 

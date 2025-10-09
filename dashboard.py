@@ -6,7 +6,7 @@ Script encargado de generar los archivos HTML que se muestran al momento de pres
 '''
 
 ## Directorio de salida de los HTML
-directory = '/var/www/html/mapaMet/output_dashboard/'
+directory = '/var/www/html/mapas/mapa_convencionales/output_dashboard/'
 ## Enlace que conecta a la carpeta de la página
 url = 'https://insivumeh.gob.gt/img/Estaciones_Met/output_csv_page/'
 

@@ -10,9 +10,9 @@ Script encargado de generar los archivos HTML que se muestran dentro de la pesta
 '''
 
 ## Ruta de salida de los HTML
-directory_html = "/var/www/html/mapaMet/output_graficas/html/"
+directory_html = "/var/www/html/mapas/mapa_convencionales/output_graficas/html/"
 ## Ruta de salida de los PNG
-directory_img = "/var/www/html/mapaMet/output_graficas/img/"
+directory_img = "/var/www/html/mapas/mapa_convencionales/output_graficas/img/"
 
 # Leer el archivo CSV 
 df = pd.read_csv('database.csv', header=0, delimiter=',')

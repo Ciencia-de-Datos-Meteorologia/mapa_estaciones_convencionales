@@ -6,7 +6,7 @@ Script encargado de generar los archivos HTML donde se muestran los datos mensua
 '''
 
 ## Ruta de salida de los HMTL, en este caso se sube directamente a la carpeta del servidor Apache de la computadora
-directory = '/var/www/html/mapaMet/output_csv_page/'
+directory = '/var/www/html/mapas/mapa_convencionales/output_csv_page/'
 
 ## Leer csv y extraer datos necesarios
 df = pd.read_csv('database.csv', delimiter=',', header=0)
